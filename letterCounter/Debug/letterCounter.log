@@ -1,0 +1,3 @@
+﻿  letterCounter.cpp
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\letterCounter\letterCounter.cpp(14,39): warning C4554: '&': check operator precedence for possible error; use parentheses to clarify precedence
+  letterCounter.vcxproj -> C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\letterCounter\Debug\letterCounter.exe

@@ -1,0 +1,5 @@
+﻿  Main.cpp
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  fileRead.vcxproj -> C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Debug\fileRead.exe

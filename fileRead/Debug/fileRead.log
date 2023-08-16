@@ -2,6 +2,9 @@
 C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
-C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(15,21): warning C4018: '<': signed/unsigned mismatch
-C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(11,5): warning C4102: 'std': unreferenced label
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(24,13): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(36,21): warning C4018: '<': signed/unsigned mismatch
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(60,30): warning C4018: '<': signed/unsigned mismatch
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(61,22): warning C4018: '<': signed/unsigned mismatch
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(69,20): warning C4018: '<': signed/unsigned mismatch
   fileRead.vcxproj -> C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Debug\fileRead.exe

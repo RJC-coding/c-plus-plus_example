@@ -22,10 +22,10 @@ int main() {
 	file.open("example.txt");
 	file.seekg(0, std::ios::end);
 	int endPos = file.tellg();
-	std::cout << endPos << "\n";
+	//std::cout << endPos << "\n";
 	
 	//Allocates this much memory for the dynamic array charList
-	//std:char* charList = (char*)malloc(endPos * sizeof(char));
+	
 	charInfo* charList = (charInfo*)malloc(endPos * sizeof(charInfo));
 	
 	file.seekg(0, std::ios::beg);
@@ -34,14 +34,10 @@ int main() {
 	while (getline(file, line))
 	{
 		for (int c = 0; c < line.length(); c++) {
-			//std::cout << "charCount: " << charCount << "\n";
-			//std::cout << "line[c]: " << line[c] << "\n";
 			charInfo cInfo;
 			cInfo.character = line[c];
 			cInfo.lineNum = lineCount;
-			//charList[charCount] = line[c];
 			charList[charCount] = cInfo;
-			//std::cout << "charList[charCount]: " << charList[charCount] << "\n";
 			charCount++;
 		}
 		lineCount++;
@@ -66,9 +62,14 @@ int main() {
 			}
 		}
 	}
+	
 	for (int b = 0; b < searchTerm.length(); b++) {
-		std::cout << searchArray[b].lineNum;
-		std::cout << searchArray[b].character;
+		for (int d = 0; d < charCount; d++) {
+			if (charList[d].lineNum == searchArray[b].lineNum) {
+				std::cout << charList[d].character;
+			}
+		}
+		std::cout << "\n";
 	}
 	std::cout << "\n";
 	free(searchArray);

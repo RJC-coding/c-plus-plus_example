@@ -52,6 +52,7 @@ int main() {
 
 	charInfo* searchArray = (charInfo*)malloc(searchTerm.length() * sizeof(charInfo));
 
+	//Still need to lowercase the search and charlist characters
 	for (int d = 0; d < endPos; d++) {
 		if (d+searchTerm.length()-1<endPos) {
 			for (int c = 0; c < searchTerm.length(); c++) {
@@ -59,10 +60,23 @@ int main() {
 					break;
 				}
 				searchArray[c] = charList[d + c];
+				//std::cout << "C " << c << "\n";
+				//std::cout << "D " << d << "\n";
+				if (c == searchTerm.length()-1) {
+					//These will be the line numbers that the search term appears in
+					std::cout << searchArray[c].lineNum << "\n";
+				}
 			}
 		}
 	}
+
+	/*
+	for (int b = 0; b < sizeof(searchArray)/sizeof(charInfo*); b++) {
+		std::cout << searchArray[b].lineNum << "\n";
+	}
+	*/
 	
+	/*
 	for (int b = 0; b < searchTerm.length(); b++) {
 		for (int d = 0; d < charCount; d++) {
 			if (charList[d].lineNum == searchArray[b].lineNum) {
@@ -71,6 +85,7 @@ int main() {
 		}
 		std::cout << "\n";
 	}
+	*/
 	std::cout << "\n";
 	free(searchArray);
 	free(charList);

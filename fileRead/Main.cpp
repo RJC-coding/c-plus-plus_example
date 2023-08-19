@@ -25,7 +25,6 @@ int main() {
 	//std::cout << endPos << "\n";
 	
 	//Allocates this much memory for the dynamic array charList
-	
 	charInfo* charList = (charInfo*)malloc(endPos * sizeof(charInfo));
 	
 	file.seekg(0, std::ios::beg);
@@ -48,11 +47,30 @@ int main() {
 	std::string searchTerm;
 	std::cin >> searchTerm;
 
-	//Because searchTerm can be any length, need to malloc that too
-
-	charInfo* searchArray = (charInfo*)malloc(searchTerm.length() * sizeof(charInfo));
+	int sameCount = 0;
+	int currentLine = 0;
+	for (int c = 0; c < endPos; c++) {
+		for (int d = 0; d < searchTerm.length(); d++) {
+			//Still need to lowercase
+			if (charList[c + d].character == searchTerm[d]) {
+				sameCount++;
+			}
+		}
+		if (sameCount == searchTerm.length()) {
+			currentLine = charList[c].lineNum;
+		} else {
+			sameCount = 0;
+		}
+		if (currentLine == charList[c].lineNum) {
+			std::cout << charList[c].character;
+		}
+		else {
+			std::cout << "\n";
+		}
+	}
 
 	//Still need to lowercase the search and charlist characters
+	/*
 	for (int d = 0; d < endPos; d++) {
 		if (d+searchTerm.length()-1<endPos) {
 			for (int c = 0; c < searchTerm.length(); c++) {
@@ -69,6 +87,7 @@ int main() {
 			}
 		}
 	}
+	*/
 
 	/*
 	for (int b = 0; b < sizeof(searchArray)/sizeof(charInfo*); b++) {
@@ -87,7 +106,6 @@ int main() {
 	}
 	*/
 	std::cout << "\n";
-	free(searchArray);
 	free(charList);
 	file.close();
 	return 0;

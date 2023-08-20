@@ -49,10 +49,17 @@ int main() {
 
 	int sameCount = 0;
 	int currentLine = 0;
-	for (int c = 0; c < endPos; c++) {
+	int c = 0;
+	int firstCharOfThisLine = 0;
+	while (c < endPos) {
+		if (c > 0) {
+			if (charList[c].lineNum != charList[c - 1].lineNum) {
+				firstCharOfThisLine = charList[c].lineNum;
+			}
+		}
 		for (int d = 0; d < searchTerm.length(); d++) {
 			//Still need to lowercase
-			if (charList[c + d].character == searchTerm[d]) {
+			if (tolower(charList[c + d].character) == tolower(searchTerm[d])) {
 				sameCount++;
 			}
 		}
@@ -64,9 +71,7 @@ int main() {
 		if (currentLine == charList[c].lineNum) {
 			std::cout << charList[c].character;
 		}
-		else {
-			std::cout << "\n";
-		}
+		c++;
 	}
 
 	//Still need to lowercase the search and charlist characters

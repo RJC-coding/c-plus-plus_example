@@ -3,6 +3,6 @@ C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp
 C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
 C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(24,13): warning C4244: 'initializing': conversion from 'std::streamoff' to 'int', possible loss of data
-C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(35,21): warning C4018: '<': signed/unsigned mismatch
-C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(60,21): warning C4018: '<': signed/unsigned mismatch
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(39,21): warning C4018: '<': signed/unsigned mismatch
+C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Main.cpp(70,21): warning C4018: '<': signed/unsigned mismatch
   fileRead.vcxproj -> C:\old laptop to new 3-11-2020\Marmalade\ForGithub\c++_example\fileRead\Debug\fileRead.exe

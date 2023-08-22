@@ -53,13 +53,16 @@ int main() {
 
 	//int* foundList = (int*)malloc(lineCount * sizeof(int));
 
-	lineCount = 1;
-	int* foundList = (int*)malloc(lineCount * sizeof(int));
+	//lineCount = 0;
+	//int* foundList = (int*)malloc(sizeof(int));
+
+	int* foundList = (int*) malloc(sizeof(int));
 
 	int sameCount = 0;
 	int currentLine = 0;
 	int c = 0;
 	int firstCharOfThisLine = 0;
+	int searchLines = 0;
 	while (c < endPos) {
 		if (c > 0) {
 			if (charList[c].lineNum != charList[c - 1].lineNum) {
@@ -79,23 +82,35 @@ int main() {
 		}
 		if (currentLine == charList[c].lineNum) {
 			//Needs more work, but potential is there.
-			int* newFoundList = (int*)malloc(lineCount * sizeof(int));
-			for (int x = 0; x < lineCount; x++) {
+			//std::cout << "LineNum: " << charList[c].lineNum << "\n";
+			//foundList[0] = charList[c].lineNum;
+			//searchLines++;
+
+			int* newFoundList = (int*)malloc(sizeof(foundList) + sizeof(int));
+			for (int x = 0; x < (sizeof(foundList)/sizeof(int)); x++) {
 				newFoundList[x] = foundList[x];
 			}
-			newFoundList[lineCount - 1] = charList[c].lineNum;
+			newFoundList[(sizeof(newFoundList) / sizeof(int)) - 1] = charList[c].lineNum;
+			/*
+			for (int x = 0; x < (sizeof(newFoundList) / sizeof(int)); x++) {
+				foundList[x] = newFoundList[x];
+			}
+			*/
 			foundList = newFoundList;
+			searchLines++;
+			//foundList = newFoundList;
 			//std::cout << charList[c].character;
 			//std::cout << lineList[linePos] << "\n";
 		}
 		c++;
 	}
 
-	for (int i = 0; i < lineCount; i++) {
-		std::cout << foundList[i];
+	for (int i = 0; i < searchLines; i++) {
+		std::cout << foundList[i] << "\n";
 	}
 
 	std::cout << "\n";
+	free(foundList);
 	free(charList);
 	file.close();
 	return 0;

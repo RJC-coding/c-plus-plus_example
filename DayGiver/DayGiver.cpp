@@ -15,6 +15,7 @@ int main()
     //tm_wday is 'days since Sunday', Sunday being 0
     int dayNum = timeinfo.tm_wday;
 
+    std::cout << "It is ";
     switch (dayNum) {
     case 1:
         std::cout << "Monday";
@@ -38,5 +39,6 @@ int main()
         std::cout << "Sunday";
         break;
     }
+    std::cout << "!";
 
 }

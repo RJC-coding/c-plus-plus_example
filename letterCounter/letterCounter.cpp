@@ -3,6 +3,7 @@
 
 int main()
 {
+    std::cout << "Enter a word." << "\n";
     char word[100];
     std::cin.getline(word, sizeof(word));
 

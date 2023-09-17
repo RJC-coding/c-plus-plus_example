@@ -46,7 +46,7 @@ int main() {
 		lineCount++;
 	}
 
-	std::cout << "Enter search term" << "\n";
+	std::cout << "Enter a search term" << "\n";
 
 	std::string searchTerm;
 	std::cin >> searchTerm;
